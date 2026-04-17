@@ -1,0 +1,65 @@
+/* ====================================================
+   APIENOVA — RTL Stylesheet (Arabic)
+   ==================================================== */
+
+html[dir="rtl"] body {
+  font-family: 'Noto Sans Arabic', 'Cormorant Garamond', serif;
+}
+
+html[dir="rtl"] #navbar {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
+html[dir="rtl"] .nav-lang { flex-direction: row-reverse; }
+
+html[dir="rtl"] .hero-content {
+  padding: calc(var(--nav-h) + 80px) 10vw 0 0;
+  text-align: right;
+}
+html[dir="rtl"] .hero-scroll { left: auto; right: 10vw; }
+html[dir="rtl"] .hero-dots { right: auto; left: 40px; }
+
+html[dir="rtl"] .phil-grid { direction: rtl; }
+html[dir="rtl"] .phil-left { text-align: right; }
+html[dir="rtl"] .gold-rule { margin-right: 0; margin-left: auto; }
+
+html[dir="rtl"] .section-head { text-align: right; }
+html[dir="rtl"] .srv-body { text-align: right; }
+html[dir="rtl"] .srv-body p { text-align: right; }
+
+html[dir="rtl"] .exp-header { text-align: right; }
+html[dir="rtl"] .exp-cap { text-align: right; }
+
+html[dir="rtl"] .dest-row { direction: rtl; }
+html[dir="rtl"] .dest-info { text-align: right; }
+
+html[dir="rtl"] .about-txt-col {
+  text-align: right;
+}
+html[dir="rtl"] .about-values { justify-content: flex-end; }
+
+html[dir="rtl"] .testi-slide { text-align: center; }
+
+html[dir="rtl"] .contact-form-col { text-align: right; }
+html[dir="rtl"] .form-row-2 { direction: rtl; }
+html[dir="rtl"] .f-field { text-align: right; }
+html[dir="rtl"] .f-field input,
+html[dir="rtl"] .f-field select,
+html[dir="rtl"] .f-field textarea { text-align: right; direction: rtl; }
+html[dir="rtl"] .contact-overlay-info { text-align: right; }
+
+html[dir="rtl"] .footer-top { flex-direction: row-reverse; }
+html[dir="rtl"] .footer-nav { flex-direction: row-reverse; }
+html[dir="rtl"] .footer-links { text-align: left; }
+html[dir="rtl"] .footer-btm { flex-direction: row-reverse; }
+html[dir="rtl"] .footer-brand { flex-direction: row-reverse; }
+html[dir="rtl"] .footer-name, html[dir="rtl"] .footer-sub { text-align: right; }
+
+html[dir="rtl"] .mobile-menu ul { text-align: center; }
+
+html[dir="rtl"] .nav-links a::after { left: auto; right: 0; }
+
+html[dir="rtl"] .ci-block { text-align: right; }
+
+html[dir="rtl"] .stats-row { flex-direction: row-reverse; }
+html[dir="rtl"] .stat-item { text-align: center; }
