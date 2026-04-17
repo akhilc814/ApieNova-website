@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ApieNOVA — Luxury Concierge · Côte d'Azur</title>
+  <meta name="description" content="ApieNOVA — Exclusive luxury concierge on the French Riviera. Superyachts, private jets, villas, gastronomy, and bespoke experiences." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&family=Noto+Sans+Arabic:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/rtl.css" id="rtl-style" disabled />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-inner">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="loader-svg">
+        <polygon points="50,6 94,78 6,78" fill="none" stroke="#B8974A" stroke-width="1.5" class="loader-poly"/>
+        <text x="50" y="62" text-anchor="middle" fill="#B8974A" font-family="Cormorant Garamond" font-size="26" font-weight="300">A</text>
+      </svg>
+      <span class="loader-name">ApieNOVA</span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="nav-emblem">
+        <polygon points="40,5 75,62 5,62" fill="none" stroke="#B8974A" stroke-width="1.5"/>
+        <text x="40" y="48" text-anchor="middle" fill="#B8974A" font-family="Cormorant Garamond" font-size="20" font-weight="300">A</text>
+      </svg>
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">ApieNOVA</span>
+        <span class="nav-brand-tag" data-i18n="nav.tagline">Luxury Concierge</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#experiences" data-i18n="nav.experiences">Experiences</a></li>
+      <li><a href="#destinations" data-i18n="nav.destinations">Destinations</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact Us</a></li>
+    </ul>
+    <div class="nav-lang">
+      <button onclick="setLang('en')" class="lang-btn" id="lang-en">EN</button>
+      <button onclick="setLang('ru')" class="lang-btn" id="lang-ru">RU</button>
+      <button onclick="setLang('ar')" class="lang-btn" id="lang-ar">عر</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" id="mobile-close" aria-label="Close">✕</button>
+    <ul>
+      <li><a href="#services" data-i18n="nav.services" class="mob-link">Services</a></li>
+      <li><a href="#experiences" data-i18n="nav.experiences" class="mob-link">Experiences</a></li>
+      <li><a href="#destinations" data-i18n="nav.destinations" class="mob-link">Destinations</a></li>
+      <li><a href="#about" data-i18n="nav.about" class="mob-link">About</a></li>
+      <li><a href="#contact" data-i18n="nav.contact" class="mob-link">Contact Us</a></li>
+    </ul>
+    <div class="mobile-lang">
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('ru')">RU</button>
+      <button onclick="setLang('ar')">عر</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg-wrap">
+      <div class="hero-slide active" style="background-image:url('assets/images/hero-1.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/images/hero-2.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/images/hero-3.jpg')"></div>
+    </div>
+    <div class="hero-veil"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Côte d'Azur · French Riviera</p>
+      <h1 class="hero-title">
+        <span data-i18n="hero.title1">Life,</span><br/>
+        <em data-i18n="hero.title2">Elevated.</em>
+      </h1>
+      <p class="hero-sub" data-i18n="hero.subtitle">Bespoke luxury concierge for those who expect nothing less than extraordinary.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary" data-i18n="hero.cta1">Request a Concierge</a>
+        <a href="#services" class="btn-ghost" data-i18n="hero.cta2">Explore Services</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span data-i18n="hero.scroll">Scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+    <div class="hero-dots" id="hero-dots">
+      <button class="hdot active" data-slide="0"></button>
+      <button class="hdot" data-slide="1"></button>
+      <button class="hdot" data-slide="2"></button>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-inner">
+      <span>Superyacht Charters</span><span class="mx">✦</span>
+      <span>Private Aviation</span><span class="mx">✦</span>
+      <span>Villa Management</span><span class="mx">✦</span>
+      <span>Michelin Dining</span><span class="mx">✦</span>
+      <span>Monaco GP Access</span><span class="mx">✦</span>
+      <span>Bespoke Weddings</span><span class="mx">✦</span>
+      <span>24/7 Concierge</span><span class="mx">✦</span>
+      <span>Superyacht Charters</span><span class="mx">✦</span>
+      <span>Private Aviation</span><span class="mx">✦</span>
+      <span>Villa Management</span><span class="mx">✦</span>
+      <span>Michelin Dining</span><span class="mx">✦</span>
+      <span>Monaco GP Access</span><span class="mx">✦</span>
+      <span>Bespoke Weddings</span><span class="mx">✦</span>
+      <span>24/7 Concierge</span><span class="mx">✦</span>
+    </div>
+  </div>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy">
+    <div class="container">
+      <div class="phil-grid">
+        <div class="phil-left">
+          <div class="gold-rule"></div>
+          <p class="section-eyebrow" data-i18n="phil.eyebrow">Our Philosophy</p>
+        </div>
+        <div class="phil-right">
+          <h2 class="phil-heading" data-i18n="phil.heading">We don't manage requests.<br/>We curate <em>lifestyles.</em></h2>
+          <p class="phil-body" data-i18n="phil.body">ApieNOVA is the private gateway to the finest experiences the French Riviera has to offer. From Saint-Tropez to Monaco, from lavender fields to Michelin tables — we handle every detail so you live every moment.</p>
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-n">24/7</span>
+              <span class="stat-l" data-i18n="stat.avail">Availability</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-n">100+</span>
+              <span class="stat-l" data-i18n="stat.srv">Curated Services</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-n">∞</span>
+              <span class="stat-l" data-i18n="stat.disc">Discretion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow" data-i18n="srv.eyebrow">What We Offer</p>
+        <h2 class="section-title" data-i18n="srv.title">A Universe of Services</h2>
+      </div>
+      <div class="srv-grid">
+
+        <div class="srv-card" data-reveal>
+          <div class="srv-img"><img src="assets/images/service-yacht.jpg" alt="Superyacht" loading="lazy"/></div>
+          <div class="srv-body">
+            <div class="srv-ico">⚓</div>
+            <h3 data-i18n="srv.yacht.title">Superyacht &amp; Nautical</h3>
+            <p data-i18n="srv.yacht.desc">Superyacht charters, private boat transfers, VIP marina docking, and full vessel management along the Côte d'Azur.</p>
+            <a href="#contact" class="srv-link" data-i18n="srv.inquire">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="srv-card" data-reveal>
+          <div class="srv-img"><img src="assets/images/service-aviation.jpg" alt="Private Aviation" loading="lazy"/></div>
+          <div class="srv-body">
+            <div class="srv-ico">✈</div>
+            <h3 data-i18n="srv.aviation.title">Private Aviation</h3>
+            <p data-i18n="srv.aviation.desc">Helicopter and private jet charters from Nice to Saint-Tropez, Monaco and beyond. Seamless. Zero compromise.</p>
+            <a href="#contact" class="srv-link" data-i18n="srv.inquire">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="srv-card" data-reveal>
+          <div class="srv-img"><img src="assets/images/service-villa.jpg" alt="Villa" loading="lazy"/></div>
+          <div class="srv-body">
+            <div class="srv-ico">🏛</div>
+            <h3 data-i18n="srv.villa.title">Villas &amp; Accommodation</h3>
+            <p data-i18n="srv.villa.desc">Five-star hotels, private villas, and Provençal estates. Full management: housekeeping, pre-stocking, security, smart home.</p>
+            <a href="#contact" class="srv-link" data-i18n="srv.inquire">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="srv-card" data-reveal>
+          <div class="srv-img"><img src="assets/images/service-dining.jpg" alt="Gastronomy" loading="lazy"/></div>
+          <div class="srv-body">
+            <div class="srv-ico">🍾</div>
+            <h3 data-i18n="srv.dining.title">Gastronomy &amp; Dining</h3>
+            <p data-i18n="srv.dining.desc">Michelin-starred reservations, private chef services, wine tastings, and VIP table service at Monaco's finest venues.</p>
+            <a href="#contact" class="srv-link" data-i18n="srv.inquire">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="srv-card" data-reveal>
+          <div class="srv-img"><img src="assets/images/service-transport.jpg" alt="Luxury Transport" loading="lazy"/></div>
+          <div class="srv-body">
+            <div class="srv-ico">🚗</div>
+            <h3 data-i18n="srv.transport.title">Luxury Transport</h3>
+            <p data-i18n="srv.transport.desc">Supercars, limousines, vintage motors — with or without chauffeurs. Electric bikes for scenic coastal routes.</p>
+            <a href="#contact" class="srv-link" data-i18n="srv.inquire">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="srv-card" data-reveal>
+          <div class="srv-img"><img src="assets/images/service-events.jpg" alt="Events & Weddings" loading="lazy"/></div>
+          <div class="srv-body">
+            <div class="srv-ico">💎</div>
+            <h3 data-i18n="srv.events.title">Events &amp; Weddings</h3>
+            <p data-i18n="srv.events.desc">Bespoke weddings in Provençal châteaux, Monaco GP afterparties, corporate galas and yacht celebrations.</p>
+            <a href="#contact" class="srv-link" data-i18n="srv.inquire">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="srv-card" data-reveal>
+          <div class="srv-img"><img src="assets/images/service-wellness.jpg" alt="Wellness" loading="lazy"/></div>
+          <div class="srv-body">
+            <div class="srv-ico">🌿</div>
+            <h3 data-i18n="srv.wellness.title">Wellness &amp; Beauty</h3>
+            <p data-i18n="srv.wellness.desc">Private doctors, spa bookings, yoga retreats, personal trainers, and beauty treatments arranged to your schedule.</p>
+            <a href="#contact" class="srv-link" data-i18n="srv.inquire">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="srv-card" data-reveal>
+          <div class="srv-img"><img src="assets/images/service-media.jpg" alt="Media" loading="lazy"/></div>
+          <div class="srv-body">
+            <div class="srv-ico">🎬</div>
+            <h3 data-i18n="srv.media.title">Media &amp; Content</h3>
+            <p data-i18n="srv.media.desc">Cinematic event filming, drone photography over the Calanques, 4K editing, live streaming, and lifestyle content creation.</p>
+            <a href="#contact" class="srv-link" data-i18n="srv.inquire">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="srv-card srv-card--wide" data-reveal>
+          <div class="srv-img"><img src="assets/images/service-lifestyle.jpg" alt="Lifestyle" loading="lazy"/></div>
+          <div class="srv-body">
+            <div class="srv-ico">👑</div>
+            <h3 data-i18n="srv.lifestyle.title">Personal Lifestyle &amp; 24/7 Assistance</h3>
+            <p data-i18n="srv.lifestyle.desc">Personal shopping in Cannes boutiques, gift sourcing, childcare, pet care, pharmacy runs, document handling, visa assistance, and anything else you need — around the clock.</p>
+            <a href="#contact" class="srv-link" data-i18n="srv.inquire">Inquire →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section id="experiences" class="experiences">
+    <div class="exp-header container">
+      <p class="section-eyebrow light" data-i18n="exp.eyebrow">Curated Moments</p>
+      <h2 class="section-title light" data-i18n="exp.title">Signature Experiences</h2>
+    </div>
+    <div class="exp-mosaic">
+      <div class="exp-cell exp-cell--tall" data-reveal>
+        <img src="assets/images/exp-monaco.jpg" alt="Monaco Grand Prix" loading="lazy"/>
+        <div class="exp-cap">
+          <span class="exp-tag" data-i18n="exp.tag.excl">Exclusive Access</span>
+          <h3 data-i18n="exp.monaco.title">Monaco Grand Prix</h3>
+          <p data-i18n="exp.monaco.desc">VIP paddock passes, trackside villas, and helicopter arrivals.</p>
+        </div>
+      </div>
+      <div class="exp-cell" data-reveal>
+        <img src="assets/images/exp-lavender.jpg" alt="Provence" loading="lazy"/>
+        <div class="exp-cap">
+          <span class="exp-tag" data-i18n="exp.tag.nature">Nature &amp; Culture</span>
+          <h3 data-i18n="exp.lav.title">Provence in Bloom</h3>
+          <p data-i18n="exp.lav.desc">Private guided tours through Luberon's lavender fields.</p>
+        </div>
+      </div>
+      <div class="exp-cell" data-reveal>
+        <img src="assets/images/exp-cannes.jpg" alt="Cannes" loading="lazy"/>
+        <div class="exp-cap">
+          <span class="exp-tag" data-i18n="exp.tag.culture">Culture</span>
+          <h3 data-i18n="exp.cannes.title">Cannes Film Festival</h3>
+          <p data-i18n="exp.cannes.desc">Red carpet access, private screenings, and Croisette villas.</p>
+        </div>
+      </div>
+      <div class="exp-cell exp-cell--tall" data-reveal>
+        <img src="assets/images/exp-wedding.jpg" alt="Wedding" loading="lazy"/>
+        <div class="exp-cap">
+          <span class="exp-tag" data-i18n="exp.tag.bespoke">Bespoke</span>
+          <h3 data-i18n="exp.wed.title">Riviera Weddings</h3>
+          <p data-i18n="exp.wed.desc">From intimate château ceremonies to grand Mediterranean affairs.</p>
+        </div>
+      </div>
+      <div class="exp-cell" data-reveal>
+        <img src="assets/images/exp-balloon.jpg" alt="Hot Air Balloon" loading="lazy"/>
+        <div class="exp-cap">
+          <span class="exp-tag" data-i18n="exp.tag.adv">Adventure</span>
+          <h3 data-i18n="exp.bal.title">Above Provence</h3>
+          <p data-i18n="exp.bal.desc">Sunrise hot air balloon flights over the Verdon Gorge.</p>
+        </div>
+      </div>
+      <div class="exp-cell" data-reveal>
+        <img src="assets/images/exp-yacht.jpg" alt="Yacht" loading="lazy"/>
+        <div class="exp-cap">
+          <span class="exp-tag" data-i18n="exp.tag.naut">Nautical</span>
+          <h3 data-i18n="exp.yacht.title">Sunset Aboard</h3>
+          <p data-i18n="exp.yacht.desc">Private sunset charters between Saint-Tropez and Antibes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section id="destinations" class="destinations">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow" data-i18n="dest.eyebrow">Our Territory</p>
+        <h2 class="section-title" data-i18n="dest.title">The French Riviera, Mastered</h2>
+      </div>
+      <div class="dest-list">
+        <div class="dest-row" data-reveal>
+          <span class="dest-num">01</span>
+          <div class="dest-info">
+            <h3>Nice</h3>
+            <p data-i18n="dest.nice">Gateway to the Riviera — arts, gastronomy, and the legendary Promenade des Anglais.</p>
+          </div>
+          <img src="assets/images/dest-nice.jpg" alt="Nice" loading="lazy" class="dest-img"/>
+        </div>
+        <div class="dest-row" data-reveal>
+          <span class="dest-num">02</span>
+          <div class="dest-info">
+            <h3>Monaco</h3>
+            <p data-i18n="dest.monaco">The principality of glamour — Grand Prix, casinos, and superyacht harbours.</p>
+          </div>
+          <img src="assets/images/dest-monaco.jpg" alt="Monaco" loading="lazy" class="dest-img"/>
+        </div>
+        <div class="dest-row" data-reveal>
+          <span class="dest-num">03</span>
+          <div class="dest-info">
+            <h3>Saint-Tropez</h3>
+            <p data-i18n="dest.sttropez">The jewel of summer — cobblestones, rosé, and legendary beach clubs.</p>
+          </div>
+          <img src="assets/images/dest-sttropez.jpg" alt="Saint-Tropez" loading="lazy" class="dest-img"/>
+        </div>
+        <div class="dest-row" data-reveal>
+          <span class="dest-num">04</span>
+          <div class="dest-info">
+            <h3>Cannes</h3>
+            <p data-i18n="dest.cannes">Film, fashion, and fine dining on the golden Croisette.</p>
+          </div>
+          <img src="assets/images/dest-cannes.jpg" alt="Cannes" loading="lazy" class="dest-img"/>
+        </div>
+        <div class="dest-row" data-reveal>
+          <span class="dest-num">05</span>
+          <div class="dest-info">
+            <h3>Provence</h3>
+            <p data-i18n="dest.provence">Timeless beauty — lavender, vineyards, and medieval villages of the hinterland.</p>
+          </div>
+          <img src="assets/images/dest-provence.jpg" alt="Provence" loading="lazy" class="dest-img"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-img-col">
+      <img src="assets/images/about-riviera.jpg" alt="French Riviera" loading="lazy"/>
+      <div class="about-badge">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="60,8 112,90 8,90" fill="none" stroke="#B8974A" stroke-width="1"/>
+          <text x="60" y="72" text-anchor="middle" fill="#B8974A" font-family="Cormorant Garamond" font-size="28" font-weight="300">A</text>
+        </svg>
+      </div>
+    </div>
+    <div class="about-txt-col">
+      <p class="section-eyebrow" data-i18n="about.eyebrow">Who We Are</p>
+      <h2 data-i18n="about.title">Born on the Riviera.<br/><em>Built for Excellence.</em></h2>
+      <p data-i18n="about.p1">ApieNOVA is a luxury concierge house rooted in the South of France. We were born from a deep knowledge of the Côte d'Azur — its rhythms, its people, its hidden doors — and a belief that true luxury is not about possessions, but about time, ease, and unforgettable memory.</p>
+      <p data-i18n="about.p2">Led by Mr. Jaafar Altarawneh, our team combines local expertise with an international vision to serve the world's most discerning travellers, residents, and private clients.</p>
+      <div class="about-values">
+        <div class="av-pill" data-i18n="val.disc">Discretion</div>
+        <div class="av-pill" data-i18n="val.excl">Excellence</div>
+        <div class="av-pill" data-i18n="val.besp">Bespoke</div>
+        <div class="av-pill" data-i18n="val.avail">24/7 Available</div>
+      </div>
+      <a href="#contact" class="btn-primary" data-i18n="about.cta">Engage ApieNOVA</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <p class="section-eyebrow center" data-i18n="testi.eyebrow">Client Words</p>
+      <div class="testi-slider">
+        <div class="testi-slide active">
+          <p class="testi-q" data-i18n="testi.q1">"ApieNOVA made our anniversary on the Riviera utterly unforgettable. From the helicopter arrival to the private chef dinner on the yacht — every detail was flawless."</p>
+          <span class="testi-who">— M. &amp; Mme. D., Paris</span>
+        </div>
+        <div class="testi-slide">
+          <p class="testi-q" data-i18n="testi.q2">"The team arranged our entire Monaco GP weekend — hospitality suite, after-party, hotel, and a vintage Ferrari for the drive. Pure magic."</p>
+          <span class="testi-who">— A.K., London</span>
+        </div>
+        <div class="testi-slide">
+          <p class="testi-q" data-i18n="testi.q3">"I gave them 48 hours to plan a surprise birthday on a superyacht in Saint-Tropez. They delivered beyond imagination."</p>
+          <span class="testi-who">— N.S., Dubai</span>
+        </div>
+      </div>
+      <div class="testi-controls">
+        <button class="testi-btn" id="testi-prev" aria-label="Previous">←</button>
+        <button class="testi-btn" id="testi-next" aria-label="Next">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="contact-grid">
+      <div class="contact-visual">
+        <img src="assets/images/contact-bg.jpg" alt="Côte d'Azur" loading="lazy"/>
+        <div class="contact-overlay-info">
+          <div class="ci-block">
+            <span class="ci-lbl" data-i18n="ci.email">Email</span>
+            <a href="mailto:info@apienova.com">info@apienova.com</a>
+          </div>
+          <div class="ci-block">
+            <span class="ci-lbl" data-i18n="ci.web">Website</span>
+            <a href="https://www.apienova.com">www.apienova.com</a>
+          </div>
+          <div class="ci-block">
+            <span class="ci-lbl" data-i18n="ci.loc">Location</span>
+            <span data-i18n="ci.locval">Nice · French Riviera</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-col">
+        <p class="section-eyebrow" data-i18n="contact.eyebrow">Get in Touch</p>
+        <h2 data-i18n="contact.title">Request Your<br/><em>Private Concierge</em></h2>
+        <form id="contact-form" novalidate>
+          <div class="form-row-2">
+            <div class="f-field">
+              <label for="fname" data-i18n="f.fname">First Name</label>
+              <input type="text" id="fname" name="fname" required autocomplete="given-name"/>
+            </div>
+            <div class="f-field">
+              <label for="lname" data-i18n="f.lname">Last Name</label>
+              <input type="text" id="lname" name="lname" required autocomplete="family-name"/>
+            </div>
+          </div>
+          <div class="f-field">
+            <label for="email" data-i18n="f.email">Email Address</label>
+            <input type="email" id="email" name="email" required autocomplete="email"/>
+          </div>
+          <div class="f-field">
+            <label for="phone" data-i18n="f.phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel"/>
+          </div>
+          <div class="f-field">
+            <label for="service" data-i18n="f.service">Service of Interest</label>
+            <select id="service" name="service">
+              <option value="" data-i18n="f.select">Select a service…</option>
+              <option value="yacht" data-i18n="f.o.yacht">Superyacht &amp; Nautical</option>
+              <option value="aviation" data-i18n="f.o.aviation">Private Aviation</option>
+              <option value="villa" data-i18n="f.o.villa">Villa &amp; Accommodation</option>
+              <option value="dining" data-i18n="f.o.dining">Gastronomy &amp; Dining</option>
+              <option value="transport" data-i18n="f.o.transport">Luxury Transport</option>
+              <option value="events" data-i18n="f.o.events">Events &amp; Weddings</option>
+              <option value="wellness" data-i18n="f.o.wellness">Wellness &amp; Beauty</option>
+              <option value="media" data-i18n="f.o.media">Media &amp; Content</option>
+              <option value="other" data-i18n="f.o.other">Other / Bespoke</option>
+            </select>
+          </div>
+          <div class="f-field">
+            <label for="message" data-i18n="f.msg">Your Request</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" data-i18n="f.submit">Send Request</button>
+          <p class="f-disclaimer" data-i18n="f.disc">Your enquiry is treated with absolute discretion. We respond within 24 hours.</p>
+        </form>
+        <div id="form-success" class="form-success hidden" data-i18n="f.ok">
+          Thank you. A member of the ApieNOVA team will be in touch shortly.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="48">
+            <polygon points="40,5 75,62 5,62" fill="none" stroke="#B8974A" stroke-width="1.2"/>
+            <text x="40" y="48" text-anchor="middle" fill="#B8974A" font-family="Cormorant Garamond" font-size="20" font-weight="300">A</text>
+          </svg>
+          <div>
+            <p class="footer-name">ApieNOVA</p>
+            <p class="footer-sub" data-i18n="footer.sub">Luxury Concierge · Côte d'Azur</p>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#experiences" data-i18n="nav.experiences">Experiences</a>
+          <a href="#destinations" data-i18n="nav.destinations">Destinations</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="footer-links">
+          <a href="mailto:info@apienova.com">info@apienova.com</a>
+          <a href="https://www.apienova.com">www.apienova.com</a>
+        </div>
+      </div>
+      <div class="footer-btm">
+        <p data-i18n="footer.copy">© 2026 ApieNOVA. All rights reserved.</p>
+        <p class="footer-cities">Nice · Monaco · Saint-Tropez · Cannes · Provence</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
